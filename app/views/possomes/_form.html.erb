@@ -1,0 +1,22 @@
+<%= form_with(model: possome, local: true ,url: choose_new_or_edit ) do |form| %>
+  <% if possome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(possome.errors.count, "error") %> prohibited this possome from being saved:</h2>
+
+      <ul>
+      <% possome.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :"Post Something" %>
+    <%= form.text_area :body, id: :possome_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Post" %>
+  </div>
+<% end %>

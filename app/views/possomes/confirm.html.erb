@@ -1,0 +1,14 @@
+<h3>Confirmation</h3>
+
+<%= form_with(model: @possome, url: possomes_path, local: true) do |form| %>
+  <%= form.hidden_field :body %>
+
+  <p>Something:<%= @possome.body %></p>
+  <%= form.submit  "Post" %>
+<% end %>
+
+<%= form_with(model: @possome, url: new_possome_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :body %>
+  <%= form.submit "Back",name: 'back' %>
+<% end %>
+

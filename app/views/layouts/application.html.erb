@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PostSomething</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="normalize.css">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+    <header>
+      <h1>Possomes - Post Something</h1>
+      <ul>
+        <li><a href="/possomes">PostedList</a></li>
+        <li><a href="/possomes/new">NewPost</a></li>
+      </ul>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>2018 knittkg</p>
+    </footer>
+    </div>
+  </body>
+</html>

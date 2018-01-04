@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Posted List</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @possomes.each do |possome| %>
+      <tr>
+        <td><%= possome.body %></td>
+        <td><%= link_to 'Edit', edit_possome_path(possome) %></td>
+        <td><%= link_to 'Delete', possome, method: :delete, data: { confirm: 'Delete OK?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%
+=begin
+%>
+ <%= link_to 'New Possome', new_possome_path %> 
+<%
+=end
+%>
