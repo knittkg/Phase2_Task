@@ -2,18 +2,19 @@
 <html>
   <head>
     <title>PostSomething</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css","w3.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="container">
     <header>
-      <h1>Possomes - Post Something</h1>
-      <ul>
+      <h2>Possomes - Post Something</h2>
+      <ul class="top_menu clearfix">
         <li><a href="/possomes">PostedList</a></li>
         <li><a href="/possomes/new">NewPost</a></li>
       </ul>
